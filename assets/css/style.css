@@ -635,8 +635,7 @@ header {
 
     .projets__item {
         width: 34%;
-        margin-right: 30px;
-        margin-bottom: 30px;
+        margin: 15px;
     }
 
     .projects__button {
@@ -926,7 +925,15 @@ header {
         left: 27.5%;
     }
 
+    .projects {
+        min-height: 735px;
+    }
+
     /* video */
+    .video {
+        min-height: 660px;
+    }
+
     .video__inner {
         position: relative;
         padding-bottom: 40px;
@@ -954,7 +961,7 @@ header {
     }
 
     .video--white {
-        visibility: hidden;
+        display: none;
     }
 
     /* footer */
@@ -980,6 +987,10 @@ header {
     /* Projects */
     .projects__button {
         left: 20.5%;
+    }
+    
+    .projects {
+        min-height: 686px;
     }
 }
 
