@@ -17,7 +17,7 @@
 }
 
 /* Header */
-header {
+.header {
     position: absolute;
     top: 0;
     left: 0;
@@ -28,10 +28,17 @@ header {
     border-bottom: 1px solid #A1A1A1;
 }
 
+.header.fixed {
+    position: fixed;
+    background-color: #000;
+    border: 0;
+    height: 70px;
+}
+
 .header__menu {
     position: absolute;
     left: 50%;
-    top: 40px;
+    top: 40%;
 }
 
 .nav__link{
@@ -41,9 +48,19 @@ header {
     font-size: 16px;
 }
 
-.nav__link:hover {
-    padding-bottom: 40px;
-    border-bottom: 2px #fff solid;
+.nav__link.mobile {
+    display: none;
+}
+
+.nav__link.active {
+    color: #999;
+}
+
+.burger {
+    display: none;
+    color: #fff;
+    font-size: 22px;
+    padding-left: 100%;
 }
 
 
@@ -868,6 +885,41 @@ header {
         display: none;
     }
 
+    .nav.active {
+        display: block;
+        position: absolute;
+        top: 120%;
+        background-color: #000;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .nav__link {
+        margin: 0 5px;
+    }
+    
+    .burger {
+        display: block;
+        position: relative;
+        left: 0;
+        top: 0;
+        padding-left: 0;
+    }
+
+    .header {
+        height: 65px;
+    }
+
+    .header.fixed {
+        height: 55px;
+    }
+
+    .header__menu {
+        top: 35%;
+        width: 100%;
+    }
+
+
     /* Main */
     .main__title {
         font-size: 18px;
@@ -975,6 +1027,11 @@ header {
 }
 
 @media (max-width: 420px) {
+    /* Info */
+    .info__img {
+        width: 310px;
+    }
+    
     /* Works */
     .works--white {
         height: 1375px;
